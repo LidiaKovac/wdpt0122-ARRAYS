@@ -95,21 +95,21 @@ const arrayOfCars = [
     model: "James Cook",
     licensePlate: "DS56879",
     status: {
-      isUsed: true,
+      isUsed: true, 
       isForSale: true,
       mileage: 23444,
       accidentHistory: [
         {
           description: "Fire",
           isTotaled: true,
-          repairNotes: "Sent to junkyard",
+          repairNotes: "Sent to junkyard", 
         },
       ],
     },
   },
   {
     brand: "Kia",
-    model: "Ceed",
+    model: "Ceed", 
     licensePlate: "SFE534",
     status: {
       isUsed: true,
@@ -123,12 +123,12 @@ const arrayOfCars = [
     model: "Model S",
     licensePlate: "SW85933",
     status: {
-      isUsed: true,
-      isForSale: true,
+      isUsed: true, 
+      isForSale: true, //target
       mileage: 83504,
       accidentHistory: [
         {
-          description: "Charging plug ripped away",
+          description: "Charging plug ripped away", 
           isTotaled: false,
           repairNotes: "Replaced",
         },
@@ -137,10 +137,78 @@ const arrayOfCars = [
   },
 ]
 
+console.log(arrayOfCars[arrayOfCars.length - 1].status.isForSale)
+console.log(arrayOfCars[1].status.accidentHistory[0].repairNotes)
+console.log(arrayOfCars[1].status.isUsed) // true
 console.log(arrayOfCars[0].status.mileage)
 console.log(arrayOfCars[0].status.accidentHistory[0].repairNotes) //NONE
 // console.log(arrayOfCars[arrayOfCars.length - 1].status.accidentHistory[0].repairNotes) 
 let lastIndex = arrayOfCars.length - 1
 console.log(arrayOfCars[lastIndex].status.accidentHistory[0].description) //Replaced
+console.log(arrayOfCars[2].status.mileage)
+console.log(arrayOfCars[lastIndex].status.accidentHistory[0].description)
+
+
+let arrayOfNumbers = [3,4,6,7,2,4,-7]
+console.log(arrayOfNumbers);
+
+// array.push(6,7) - Adds elements to the end of array, and returns its new length
+// arrayOfNumbers.push(34, 89, "Hello World") //possible, but wrong
+arrayOfNumbers.push(34, 89)
+console.log("Push:", arrayOfNumbers);
+
+
+// array.concat(val1, val2, …) - copies multiple arrays / values into a single array
+let newArrayOfNumbers = arrayOfNumbers.concat(45,67)
+console.log("Concat:", newArrayOfNumbers);
+
+// array.indexOf(2) - returns index of an element or -1 if it is not there
+let indexOf4 = newArrayOfNumbers.indexOf(4) //1
+let indexOf7 = newArrayOfNumbers.indexOf(7) //3
+let indexOfM7 = newArrayOfNumbers.indexOf(-7) // 6
+let indexOf22 = newArrayOfNumbers.indexOf(22) //-1 === NOT FOUND
+
+console.log("4 is first found at:", indexOf4, "\n7 is first found at:", indexOf7, "\n22 is first found at:", indexOf22);
+
+// array.lastIndexOf(1) - returns last index of an element or -1 if it is not there
+let lastIndexOf4 = newArrayOfNumbers.lastIndexOf(4) //5
+let lastIndexOf7 = newArrayOfNumbers.lastIndexOf(7) //3
+let lastIndexOfM7 = newArrayOfNumbers.lastIndexOf(-7) // 6
+let lastIndexOf22 = newArrayOfNumbers.lastIndexOf(22) // -1 === NOT FOUND
+console.log("4 is last found at:", lastIndexOf4, "\n7 is last found at:", lastIndexOf7, "\n22 is last found at:", lastIndexOf22);
+
+// array.pop() - Removes the last element of an array, and returns that element
+console.log("Before the pop", newArrayOfNumbers);
+newArrayOfNumbers.pop() 
+console.log("After the pop", newArrayOfNumbers);
+
+// array.slice(-6, 5) - Selects part of an array, starting and ending at a certain index
+let firstThree = newArrayOfNumbers.slice(0, 3) //the first three elements of the array
+console.log(firstThree);
+let fromFive = newArrayOfNumbers.slice(5) //everything from index 5 to the end
+console.log(fromFive);
+
+let firstPart = newArrayOfNumbers.slice(0,3)
+let secondPart = newArrayOfNumbers.slice(4)
+let newArray = firstPart.concat(secondPart)
+console.log(newArray);
+
+// array.includes(2) - returns true if element is in array, false otherwise
+let is34There = newArrayOfNumbers.includes(34)
+console.log(is34There) //true
+let is90There = newArrayOfNumbers.includes(90)
+console.log(is90There); //false
+
+if(newArrayOfNumbers.includes(90)) {
+  console.log("90 is home!")
+} else {
+  console.log("90 is not home!")
+}
+
+// array.join(‘,’) - returns a string of combined array elements divided by delimiter
+
+let arrayOfStrings = ["Hello", "Johnatan", "how", "are", "you", "doing?"]
+let completeString = arrayOfStrings.join("☺☻")
+console.log(completeString);
 
 
