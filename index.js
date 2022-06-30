@@ -211,4 +211,74 @@ let arrayOfStrings = ["Hello", "Johnatan", "how", "are", "you", "doing?"]
 let completeString = arrayOfStrings.join("☺☻")
 console.log(completeString);
 
+// for(let i = 0; i < 10; i++) {
 
+// }
+let numbers= [45,22,93,14,500]
+
+// console.log(numbers[0] * 2)
+// console.log(numbers[1] * 2)
+// console.log(numbers[2] * 2)
+// console.log(numbers[3] * 2)
+
+
+for(let i = 0; i < numbers.length; i++) {
+  numbers[i] = numbers[i] / 2
+  //1. i = 0 => numbers[0] || i++
+  //2. i = 1 => numbers[1] || i++
+  //3. i = 2 => numbers[2] .................
+}
+
+console.log(numbers)
+
+const arrayOfPoems2 = [
+  {
+    author: "Edith",
+    title: "Mystery.",
+    text: "I was playing in the / streets but / then I lost my toy",
+    source: [
+      "Book of poetry",
+      "Literature for dummies",
+      "Literary programmers",
+    ],
+  },
+  {
+    author: "Mary",
+    title: "I was a Tree",
+    text: "The tree had / three branches",
+    source: [
+      "Book of poetry",
+      "Literature for dummies",
+      "Literary programmers",
+    ],
+  },
+  {
+    author: "John",
+    title: "The day is over",
+    text: "The moon is rising and the streets / are empty",
+    source: [
+      "Book of poetry",
+      "Literature for dummies",
+      "Literary programmers",
+    ],
+  },
+  {
+    author: "Sebastian",
+    title: "Okay",
+    text: "You are saying 'okay', but it's not okay",
+    source: [
+      "Book of poetry",
+      "Literature for dummies",
+      "Literary programmers",
+    ],
+  },
+]
+
+for(let i = 0; i < arrayOfPoems2.length; i++) {
+  //to print all the titles of the poems
+  console.log(arrayOfPoems2[i].title)
+}
+
+for(let i = 0; i < arrayOfPoems2.length; i++) {
+  console.log(arrayOfPoems2[i].source[0])
+}
